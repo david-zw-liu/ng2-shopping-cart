@@ -7,6 +7,7 @@
 >4. Bootsrap 3.3.6 Sass
 >5. jQuery 2.2.4
 >6. Some of loaders of webpack.... check package.json
+
 ## Usage
 >1. npm install
 >2. npm start  

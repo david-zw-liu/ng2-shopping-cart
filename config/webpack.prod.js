@@ -11,7 +11,7 @@ module.exports = webpackMerge(commonConfig, {
 
   output: {
     path: helpers.root('dist'),
-    publicPath: '/',
+    publicPath: 'https://msglight4874.github.io/ng2-shopping-cart/',
     filename: '[name].[hash].js',
     chunkFilename: '[id].[hash].chunk.js'
   },

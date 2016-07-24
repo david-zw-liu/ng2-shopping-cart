@@ -2,6 +2,7 @@
   // And JSON comments also!
   "bootstrapVersion": 3,
   "styleLoaders": ["style", "css", "sass"],
+  "appStyles": "./assets/sass/main.sass",
   "styles": true,
   "scripts": true
 }

@@ -1,0 +1,19 @@
+<div class="row" id="cart-form">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <shopping-cart-form></shopping-cart-form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <shopping-cart-list></shopping-cart-list>
+    </div>
+</div>
+<div class="row" id="total-detail">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <div class="pull-right">
+            <span><label>Tax ({{getTax()}}%):</label> ${{ getTotalTax() | number }}</span>
+            <br>
+            <span><label>Total:</label> ${{ getTotalWithTax() | number }}</span>
+        </div>
+    </div>
+</div>

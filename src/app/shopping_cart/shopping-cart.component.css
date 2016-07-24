@@ -1,0 +1,17 @@
+span {
+    font-size: 20px;
+}
+
+span > label {
+    font-weight: bold;
+}
+
+#cart-form {
+    border-bottom: 2px ridge dimgray;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#total-detail{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,19 @@
+<span *ngIf="!_toggle && prop === 'name'" (click)="toggle()">
+    {{  _tempProduct[prop] }}
+</span>
+
+<span *ngIf="!_toggle && prop === 'price'" (click)="toggle()">
+    ${{  _tempProduct[prop] | number }}
+</span>
+
+<span *ngIf="!_toggle && prop === 'amount'" (click)="toggle()">
+    {{  _tempProduct[prop] | number }}
+</span>
+
+<div class="input-group" *ngIf="_toggle">
+    <input type="{{type}}" class="form-control" [(ngModel)]="_tempProduct[prop]" min="{{min}}" required="required">
+    <div class="input-group-btn">
+        <button class="btn btn-default" type="submit" (click)="update()"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+        <button class="btn btn-danger" type="button" (click)="toggle()"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+    </div>
+</div>    

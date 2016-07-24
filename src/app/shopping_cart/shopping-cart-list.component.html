@@ -1,0 +1,27 @@
+<h2 class="text-center">Shopping Cart List</h2>
+<table class="table table-striped">
+    <caption class="clearfix">
+        <button class="btn btn-danger" (click)="_shoppingCartService.clearCart()"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Clear</button>
+        <button class="btn btn-default pull-right" (click)="_shoppingCartService.undoCartState()"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> Undo</button>
+    </caption>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Product name</th>
+            <th>Product price</th>
+            <th>Product amount</th>
+            <th>Total</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of _shoppingCartService.getCart(); let i=index">
+            <th scope="row">{{ i+1 }}</th>
+            <td><inline-edit [index]="i" [type]="'text'" [prop]="'name'"></inline-edit></td>
+            <td><inline-edit [index]="i" [type]="'number'" [prop]="'price'" [min]="0"></inline-edit></td>
+            <td><inline-edit [index]="i" [type]="'number'" [prop]="'amount'" [min]="1"></inline-edit></td>
+            <td>${{ product.total | number }}</td>
+            <td><button class="btn btn-danger" (click)="removeProductInCart(i)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+        </tr>
+    </tbody>
+</table>
